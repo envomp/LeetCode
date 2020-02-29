@@ -28,7 +28,6 @@ class Solution {
     }
 }
 
-
 // class Solution {
 //     double[][] preCalculated;
 
