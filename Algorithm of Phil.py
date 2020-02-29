@@ -1,6 +1,12 @@
-lines = int(input())
-for line in range(lines):
-    case = list(map(int, list(input())))
+import sys
+
+
+lines = sys.stdin.readlines()
+amount = int(lines[0].strip())
+i = 1
+wannabeStringBuilder = []
+for line in range(amount):
+    case = list(map(int, list(lines[i].strip())))
     case_size = len(case)
     answer = 0
 
@@ -17,4 +23,8 @@ for line in range(lines):
             answer = answer + (a * 2) ** (case_size - 1)
 
         case_size -= 1
-    print(f"Case #{line + 1}: {answer % 1000000007}")
+    wannabeStringBuilder.append(f"Case #{line + 1}: {answer % 1000000007}")
+    i += 1
+
+sys.stdout.write("\n".join(wannabeStringBuilder))
+sys.stdout.close()
