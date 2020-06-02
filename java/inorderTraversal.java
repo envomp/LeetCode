@@ -1,3 +1,5 @@
+package java;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -9,32 +11,23 @@
  */
 class Solution {
 
-     List<Integer> sorted = new ArrayList<>();
+    List<Integer> sorted = new ArrayList<>();
+    public List<Integer> inorderTraversal(TreeNode root) {
 
-    public List<Integer> postorderTraversal(TreeNode root) {
-
-        if (root == null) {
-            return new ArrayList<Integer>();
-        }
-
-        this.traverse(root);
+        this.traverse(TreeNode root);
         return sorted;
-
     }
 
-     private void traverse(TreeNode root) {
-
+    private void traverse(TreeNode root) {
         if (root.left != null) {
             this.traverse(root.left);
         }
 
+        this.sorted.append(root.val);
 
         if (root.right != null) {
             this.traverse(root.right);
         }
 
-        this.sorted.add(root.val);
-
     }
-
 }
