@@ -1,6 +1,6 @@
 import scala.collection.mutable
 
-object Solution {
+object TableFlip {
 
 	protected var visited: mutable.HashSet[Int] = _
 	protected var m: Int = _
