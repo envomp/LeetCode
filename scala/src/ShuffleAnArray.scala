@@ -1,12 +1,3 @@
-object shuffle_an_array {
-	def main(args: Array[String]): Unit = {
-		var obj = new ShuffleAnArray(Array(1, 2, 3, 4, 5))
-		var param_1 = obj.reset()
-		var param_2 = obj.shuffle()
-		return
-	}
-}
-
 /**
  * Your Solution object will be instantiated and called as such:
  * var obj = new Solution(nums)
@@ -20,11 +11,11 @@ class ShuffleAnArray(_nums: Array[Int]) {
 
 	/** Resets the array to its original configuration and return it. */
 	def reset(): Array[Int] = {
-		return nums;
+		nums
 	}
 
 	/** Returns a random shuffling of the array. */
 	def shuffle(): Array[Int] = {
-		return util.Random.shuffle(nums).array.map(x => x.##)
+		util.Random.shuffle(nums).array.map(x => x.##)
 	}
 }

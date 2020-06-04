@@ -20,16 +20,17 @@ object LongestUncommonSubsequenceII {
 		false
 	}
 
-	private def isSubSeq(s1: String, s2: String) = {
+	private def isSubSeq(s1: String, s2: String): Boolean = {
 		var i = 0
 		var j = 0
-		while ( {
-			j < s2.length && i < s1.length
-		}) if (s1.charAt(i) == s2.charAt(j)) {
-			i += 1
-			j += 1
+		while (j < s2.length && i < s1.length) {
+			if (s1.charAt(i) == s2.charAt(j)) {
+				i += 1
+				j += 1
+			} else {
+				j += 1
+			}
 		}
-		else j += 1
 		i == s1.length
 	}
 
