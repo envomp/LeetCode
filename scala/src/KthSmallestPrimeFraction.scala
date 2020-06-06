@@ -1,6 +1,6 @@
 import scala.collection.mutable
 
-object Solution {
+object KthSmallestPrimeFraction {
 	private def comparator(t2: (Double, (Int, Int))) = {
 		val (a, _) = t2
 		-a

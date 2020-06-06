@@ -13,7 +13,7 @@ class TreeNode(_value: Int = 0, _left: TreeNode = null, _right: TreeNode = null)
 	var right: TreeNode = _right
 }
 
-object Solution {
+object MaximumDifferenceBetweenNodeAndAncestor {
 
 	def DFS(root: TreeNode, minimum: Int, maximum: Int): Int = {
 		if (root == null) {
